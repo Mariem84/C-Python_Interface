@@ -1,6 +1,6 @@
 #include "example.h"
 #include <iostream>
-using namespace std;
+
 
 double simul() {
 	double a[32000];
