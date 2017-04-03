@@ -69,6 +69,10 @@ except AttributeError:
     _newclass = 0
 
 
+
+def simul():
+  return _example.simul()
+simul = _example.simul
 class material(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, material, name, value)
