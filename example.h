@@ -7,3 +7,4 @@ class material
 	char name;
 };
 
+
