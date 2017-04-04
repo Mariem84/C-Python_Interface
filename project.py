@@ -1,20 +1,33 @@
 import example
 import numpy as np
 import h5py
+import matplotlib.pyplot as plt
 
 
 mat1 = example.material()
 mat2 = example.material()
-mat1.name = input("Give name of material 1 :")
+mat1.name = raw_input("Give name of material 1 :")
 mat1.index = 1
-mat1.length = input("Give length of material 1 :")
-mat1.name = input("Give name of material 2 :")
-mat1.index = 2
-mat1.length = input("Give length of material 2 :")
+mat1.length = float(raw_input("Give length of material 1 :"))
+mat2.name = raw_input("Give name of material 2 :")
+mat2.index = 2
+mat2.length = float(raw_input("Give length of material 2 :"))
 
+if mat1.length<0 or mat1.length>1e-3 or mat1.length<0 or mat1.length>1e-3:
+	raise ValueError("Please enter valid length(s)")
+
+t = np.linspace(0,50,32000)
 rho1 = example.simul()
 rho2 = example.simul()
 
+
+plt.figure(1)
+plt.subplot(211)
+plt.plot(t,rho1)
+
+plt.subplot(212)
+plt.plot(t,rho2)
+plt.show()
 
 
 with h5py.File("f.h5", "w") as hdf:

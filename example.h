@@ -3,7 +3,7 @@
 class material 
 {
 	int mat_index;
-	int length;
+	float length;
 	char name;
 };
 
