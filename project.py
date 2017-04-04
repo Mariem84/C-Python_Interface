@@ -16,7 +16,7 @@ mat2.length = float(raw_input("Give length of material 2 :"))
 if mat1.length<0 or mat1.length>1e-3 or mat1.length<0 or mat1.length>1e-3:
 	raise ValueError("Please enter valid length(s)")
 
-t = np.linspace(0,50,32000)
+t = np.linspace(0,5,32000)
 rho1 = example.simul()
 rho2 = example.simul()
 
@@ -24,9 +24,11 @@ rho2 = example.simul()
 plt.figure(1)
 plt.subplot(211)
 plt.plot(t,rho1)
+plt.axis([0,5,0,100])
 
 plt.subplot(212)
 plt.plot(t,rho2)
+plt.axis([0,5,0,100])
 plt.show()
 
 

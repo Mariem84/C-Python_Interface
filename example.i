@@ -13,7 +13,9 @@
 #define SWIG_FILE_WITH_INIT
 #include "example.h"
 double* simul();
-
+double *double_array(int size) {
+     return (double *) malloc(size*sizeof(double));
+  }
 %}
 
 /* Let's just grab the original header file here */
