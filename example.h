@@ -1,10 +1,17 @@
 /* File : example.h */
-
+#include <iostream>
 class material 
 {
+public:
 	int mat_index;
 	float length;
-	char name;
+	const char* name;
+	void set_values(int x, int y,const char* s){
+		mat_index = x;
+		length = y;
+		name = s;
+		};
 };
+
 
 

@@ -70,15 +70,29 @@ except AttributeError:
 
 
 
-def simul():
-  return _example.simul()
+def simul(*args):
+  return _example.simul(*args)
 simul = _example.simul
+
+def double_array(*args):
+  return _example.double_array(*args)
+double_array = _example.double_array
 class material(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, material, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, material, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["mat_index"] = _example.material_mat_index_set
+    __swig_getmethods__["mat_index"] = _example.material_mat_index_get
+    if _newclass:mat_index = _swig_property(_example.material_mat_index_get, _example.material_mat_index_set)
+    __swig_setmethods__["length"] = _example.material_length_set
+    __swig_getmethods__["length"] = _example.material_length_get
+    if _newclass:length = _swig_property(_example.material_length_get, _example.material_length_set)
+    __swig_setmethods__["name"] = _example.material_name_set
+    __swig_getmethods__["name"] = _example.material_name_get
+    if _newclass:name = _swig_property(_example.material_name_get, _example.material_name_set)
+    def set_values(self, *args): return _example.material_set_values(self, *args)
     def __init__(self): 
         this = _example.new_material()
         try: self.this.append(this)
