@@ -1,8 +1,2 @@
-fact.i
-fact.c
-fact.o
-_fact.so
-fact.py
-fact.pyc
-fact_wrap.c
-fact_wrap.o
+*.o
+*.so
