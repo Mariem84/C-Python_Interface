@@ -1,5 +1,5 @@
 /* File : example.h */
-#include <iostream>
+
 class material 
 {
 public:

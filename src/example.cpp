@@ -20,4 +20,6 @@ double* simul(material& mat) {
 		}
 	return a;
 }
-
+ int main(){
+	return 0;
+}

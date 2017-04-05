@@ -19,6 +19,7 @@ if mat1.length<0 or mat1.length>1e-3 or mat1.length<0 or mat1.length>1e-3:
 t = np.linspace(0,5,32000)
 rho1 = example.simul(mat1)
 rho2 = example.simul(mat2)
+print(mat1.name)
 
 
 plt.figure(1)
