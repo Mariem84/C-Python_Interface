@@ -77,30 +77,376 @@ simul = _example.simul
 def double_array(*args):
   return _example.double_array(*args)
 double_array = _example.double_array
-class material(_object):
+class SwigPyIterator(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, material, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SwigPyIterator, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, material, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, SwigPyIterator, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    __swig_setmethods__["mat_index"] = _example.material_mat_index_set
-    __swig_getmethods__["mat_index"] = _example.material_mat_index_get
-    if _newclass:mat_index = _swig_property(_example.material_mat_index_get, _example.material_mat_index_set)
-    __swig_setmethods__["length"] = _example.material_length_set
-    __swig_getmethods__["length"] = _example.material_length_get
-    if _newclass:length = _swig_property(_example.material_length_get, _example.material_length_set)
-    __swig_setmethods__["name"] = _example.material_name_set
-    __swig_getmethods__["name"] = _example.material_name_get
-    if _newclass:name = _swig_property(_example.material_name_get, _example.material_name_set)
-    def set_values(self, *args): return _example.material_set_values(self, *args)
-    def __init__(self): 
-        this = _example.new_material()
+    __swig_destroy__ = _example.delete_SwigPyIterator
+    __del__ = lambda self : None;
+    def value(self): return _example.SwigPyIterator_value(self)
+    def incr(self, n=1): return _example.SwigPyIterator_incr(self, n)
+    def decr(self, n=1): return _example.SwigPyIterator_decr(self, n)
+    def distance(self, *args): return _example.SwigPyIterator_distance(self, *args)
+    def equal(self, *args): return _example.SwigPyIterator_equal(self, *args)
+    def copy(self): return _example.SwigPyIterator_copy(self)
+    def next(self): return _example.SwigPyIterator_next(self)
+    def __next__(self): return _example.SwigPyIterator___next__(self)
+    def previous(self): return _example.SwigPyIterator_previous(self)
+    def advance(self, *args): return _example.SwigPyIterator_advance(self, *args)
+    def __eq__(self, *args): return _example.SwigPyIterator___eq__(self, *args)
+    def __ne__(self, *args): return _example.SwigPyIterator___ne__(self, *args)
+    def __iadd__(self, *args): return _example.SwigPyIterator___iadd__(self, *args)
+    def __isub__(self, *args): return _example.SwigPyIterator___isub__(self, *args)
+    def __add__(self, *args): return _example.SwigPyIterator___add__(self, *args)
+    def __sub__(self, *args): return _example.SwigPyIterator___sub__(self, *args)
+    def __iter__(self): return self
+SwigPyIterator_swigregister = _example.SwigPyIterator_swigregister
+SwigPyIterator_swigregister(SwigPyIterator)
+
+class DoubleVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, DoubleVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _example.DoubleVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _example.DoubleVector___nonzero__(self)
+    def __bool__(self): return _example.DoubleVector___bool__(self)
+    def __len__(self): return _example.DoubleVector___len__(self)
+    def pop(self): return _example.DoubleVector_pop(self)
+    def __getslice__(self, *args): return _example.DoubleVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _example.DoubleVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _example.DoubleVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _example.DoubleVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _example.DoubleVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _example.DoubleVector___setitem__(self, *args)
+    def append(self, *args): return _example.DoubleVector_append(self, *args)
+    def empty(self): return _example.DoubleVector_empty(self)
+    def size(self): return _example.DoubleVector_size(self)
+    def clear(self): return _example.DoubleVector_clear(self)
+    def swap(self, *args): return _example.DoubleVector_swap(self, *args)
+    def get_allocator(self): return _example.DoubleVector_get_allocator(self)
+    def begin(self): return _example.DoubleVector_begin(self)
+    def end(self): return _example.DoubleVector_end(self)
+    def rbegin(self): return _example.DoubleVector_rbegin(self)
+    def rend(self): return _example.DoubleVector_rend(self)
+    def pop_back(self): return _example.DoubleVector_pop_back(self)
+    def erase(self, *args): return _example.DoubleVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _example.new_DoubleVector(*args)
         try: self.this.append(this)
         except: self.this = this
-    __swig_destroy__ = _example.delete_material
+    def push_back(self, *args): return _example.DoubleVector_push_back(self, *args)
+    def front(self): return _example.DoubleVector_front(self)
+    def back(self): return _example.DoubleVector_back(self)
+    def assign(self, *args): return _example.DoubleVector_assign(self, *args)
+    def resize(self, *args): return _example.DoubleVector_resize(self, *args)
+    def insert(self, *args): return _example.DoubleVector_insert(self, *args)
+    def reserve(self, *args): return _example.DoubleVector_reserve(self, *args)
+    def capacity(self): return _example.DoubleVector_capacity(self)
+    __swig_destroy__ = _example.delete_DoubleVector
     __del__ = lambda self : None;
-material_swigregister = _example.material_swigregister
-material_swigregister(material)
+DoubleVector_swigregister = _example.DoubleVector_swigregister
+DoubleVector_swigregister(DoubleVector)
+
+class MaterialVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, MaterialVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, MaterialVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _example.MaterialVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _example.MaterialVector___nonzero__(self)
+    def __bool__(self): return _example.MaterialVector___bool__(self)
+    def __len__(self): return _example.MaterialVector___len__(self)
+    def pop(self): return _example.MaterialVector_pop(self)
+    def __getslice__(self, *args): return _example.MaterialVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _example.MaterialVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _example.MaterialVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _example.MaterialVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _example.MaterialVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _example.MaterialVector___setitem__(self, *args)
+    def append(self, *args): return _example.MaterialVector_append(self, *args)
+    def empty(self): return _example.MaterialVector_empty(self)
+    def size(self): return _example.MaterialVector_size(self)
+    def clear(self): return _example.MaterialVector_clear(self)
+    def swap(self, *args): return _example.MaterialVector_swap(self, *args)
+    def get_allocator(self): return _example.MaterialVector_get_allocator(self)
+    def begin(self): return _example.MaterialVector_begin(self)
+    def end(self): return _example.MaterialVector_end(self)
+    def rbegin(self): return _example.MaterialVector_rbegin(self)
+    def rend(self): return _example.MaterialVector_rend(self)
+    def pop_back(self): return _example.MaterialVector_pop_back(self)
+    def erase(self, *args): return _example.MaterialVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _example.new_MaterialVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _example.MaterialVector_push_back(self, *args)
+    def front(self): return _example.MaterialVector_front(self)
+    def back(self): return _example.MaterialVector_back(self)
+    def assign(self, *args): return _example.MaterialVector_assign(self, *args)
+    def resize(self, *args): return _example.MaterialVector_resize(self, *args)
+    def insert(self, *args): return _example.MaterialVector_insert(self, *args)
+    def reserve(self, *args): return _example.MaterialVector_reserve(self, *args)
+    def capacity(self): return _example.MaterialVector_capacity(self)
+    __swig_destroy__ = _example.delete_MaterialVector
+    __del__ = lambda self : None;
+MaterialVector_swigregister = _example.MaterialVector_swigregister
+MaterialVector_swigregister(MaterialVector)
+
+class RegionVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, RegionVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, RegionVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _example.RegionVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _example.RegionVector___nonzero__(self)
+    def __bool__(self): return _example.RegionVector___bool__(self)
+    def __len__(self): return _example.RegionVector___len__(self)
+    def pop(self): return _example.RegionVector_pop(self)
+    def __getslice__(self, *args): return _example.RegionVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _example.RegionVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _example.RegionVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _example.RegionVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _example.RegionVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _example.RegionVector___setitem__(self, *args)
+    def append(self, *args): return _example.RegionVector_append(self, *args)
+    def empty(self): return _example.RegionVector_empty(self)
+    def size(self): return _example.RegionVector_size(self)
+    def clear(self): return _example.RegionVector_clear(self)
+    def swap(self, *args): return _example.RegionVector_swap(self, *args)
+    def get_allocator(self): return _example.RegionVector_get_allocator(self)
+    def begin(self): return _example.RegionVector_begin(self)
+    def end(self): return _example.RegionVector_end(self)
+    def rbegin(self): return _example.RegionVector_rbegin(self)
+    def rend(self): return _example.RegionVector_rend(self)
+    def pop_back(self): return _example.RegionVector_pop_back(self)
+    def erase(self, *args): return _example.RegionVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _example.new_RegionVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _example.RegionVector_push_back(self, *args)
+    def front(self): return _example.RegionVector_front(self)
+    def back(self): return _example.RegionVector_back(self)
+    def assign(self, *args): return _example.RegionVector_assign(self, *args)
+    def resize(self, *args): return _example.RegionVector_resize(self, *args)
+    def insert(self, *args): return _example.RegionVector_insert(self, *args)
+    def reserve(self, *args): return _example.RegionVector_reserve(self, *args)
+    def capacity(self): return _example.RegionVector_capacity(self)
+    __swig_destroy__ = _example.delete_RegionVector
+    __del__ = lambda self : None;
+RegionVector_swigregister = _example.RegionVector_swigregister
+RegionVector_swigregister(RegionVector)
+
+class RecordVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, RecordVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, RecordVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _example.RecordVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _example.RecordVector___nonzero__(self)
+    def __bool__(self): return _example.RecordVector___bool__(self)
+    def __len__(self): return _example.RecordVector___len__(self)
+    def pop(self): return _example.RecordVector_pop(self)
+    def __getslice__(self, *args): return _example.RecordVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _example.RecordVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _example.RecordVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _example.RecordVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _example.RecordVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _example.RecordVector___setitem__(self, *args)
+    def append(self, *args): return _example.RecordVector_append(self, *args)
+    def empty(self): return _example.RecordVector_empty(self)
+    def size(self): return _example.RecordVector_size(self)
+    def clear(self): return _example.RecordVector_clear(self)
+    def swap(self, *args): return _example.RecordVector_swap(self, *args)
+    def get_allocator(self): return _example.RecordVector_get_allocator(self)
+    def begin(self): return _example.RecordVector_begin(self)
+    def end(self): return _example.RecordVector_end(self)
+    def rbegin(self): return _example.RecordVector_rbegin(self)
+    def rend(self): return _example.RecordVector_rend(self)
+    def pop_back(self): return _example.RecordVector_pop_back(self)
+    def erase(self, *args): return _example.RecordVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _example.new_RecordVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _example.RecordVector_push_back(self, *args)
+    def front(self): return _example.RecordVector_front(self)
+    def back(self): return _example.RecordVector_back(self)
+    def assign(self, *args): return _example.RecordVector_assign(self, *args)
+    def resize(self, *args): return _example.RecordVector_resize(self, *args)
+    def insert(self, *args): return _example.RecordVector_insert(self, *args)
+    def reserve(self, *args): return _example.RecordVector_reserve(self, *args)
+    def capacity(self): return _example.RecordVector_capacity(self)
+    __swig_destroy__ = _example.delete_RecordVector
+    __del__ = lambda self : None;
+RecordVector_swigregister = _example.RecordVector_swigregister
+RecordVector_swigregister(RecordVector)
+
+class Record(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Record, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Record, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Record_name_set
+    __swig_getmethods__["name"] = _example.Record_name_get
+    if _newclass:name = _swig_property(_example.Record_name_get, _example.Record_name_set)
+    __swig_setmethods__["interval"] = _example.Record_interval_set
+    __swig_getmethods__["interval"] = _example.Record_interval_get
+    if _newclass:interval = _swig_property(_example.Record_interval_get, _example.Record_interval_set)
+    __swig_setmethods__["row_index"] = _example.Record_row_index_set
+    __swig_getmethods__["row_index"] = _example.Record_row_index_get
+    if _newclass:row_index = _swig_property(_example.Record_row_index_get, _example.Record_row_index_set)
+    __swig_setmethods__["col_index"] = _example.Record_col_index_set
+    __swig_getmethods__["col_index"] = _example.Record_col_index_get
+    if _newclass:col_index = _swig_property(_example.Record_col_index_get, _example.Record_col_index_set)
+    def __init__(self): 
+        this = _example.new_Record()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Record
+    __del__ = lambda self : None;
+Record_swigregister = _example.Record_swigregister
+Record_swigregister(Record)
+
+class Material(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Material, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Material, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Material_name_set
+    __swig_getmethods__["name"] = _example.Material_name_get
+    if _newclass:name = _swig_property(_example.Material_name_get, _example.Material_name_set)
+    __swig_setmethods__["epsilon_r"] = _example.Material_epsilon_r_set
+    __swig_getmethods__["epsilon_r"] = _example.Material_epsilon_r_get
+    if _newclass:epsilon_r = _swig_property(_example.Material_epsilon_r_get, _example.Material_epsilon_r_set)
+    __swig_setmethods__["mu_r"] = _example.Material_mu_r_set
+    __swig_getmethods__["mu_r"] = _example.Material_mu_r_get
+    if _newclass:mu_r = _swig_property(_example.Material_mu_r_get, _example.Material_mu_r_set)
+    __swig_setmethods__["sigma"] = _example.Material_sigma_set
+    __swig_getmethods__["sigma"] = _example.Material_sigma_get
+    if _newclass:sigma = _swig_property(_example.Material_sigma_get, _example.Material_sigma_set)
+    def set_values(self, *args): return _example.Material_set_values(self, *args)
+    def __init__(self): 
+        this = _example.new_Material()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Material
+    __del__ = lambda self : None;
+Material_swigregister = _example.Material_swigregister
+Material_swigregister(Material)
+
+class Region(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Region, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Region, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Region_name_set
+    __swig_getmethods__["name"] = _example.Region_name_get
+    if _newclass:name = _swig_property(_example.Region_name_get, _example.Region_name_set)
+    __swig_setmethods__["x_start"] = _example.Region_x_start_set
+    __swig_getmethods__["x_start"] = _example.Region_x_start_get
+    if _newclass:x_start = _swig_property(_example.Region_x_start_get, _example.Region_x_start_set)
+    __swig_setmethods__["x_end"] = _example.Region_x_end_set
+    __swig_getmethods__["x_end"] = _example.Region_x_end_get
+    if _newclass:x_end = _swig_property(_example.Region_x_end_get, _example.Region_x_end_set)
+    __swig_setmethods__["material_index"] = _example.Region_material_index_set
+    __swig_getmethods__["material_index"] = _example.Region_material_index_get
+    if _newclass:material_index = _swig_property(_example.Region_material_index_get, _example.Region_material_index_set)
+    def __init__(self): 
+        this = _example.new_Region()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Region
+    __del__ = lambda self : None;
+Region_swigregister = _example.Region_swigregister
+Region_swigregister(Region)
+
+class Device(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Device, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Device, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Device_name_set
+    __swig_getmethods__["name"] = _example.Device_name_get
+    if _newclass:name = _swig_property(_example.Device_name_get, _example.Device_name_set)
+    __swig_setmethods__["materials"] = _example.Device_materials_set
+    __swig_getmethods__["materials"] = _example.Device_materials_get
+    if _newclass:materials = _swig_property(_example.Device_materials_get, _example.Device_materials_set)
+    __swig_setmethods__["regions"] = _example.Device_regions_set
+    __swig_getmethods__["regions"] = _example.Device_regions_get
+    if _newclass:regions = _swig_property(_example.Device_regions_get, _example.Device_regions_set)
+    def __init__(self): 
+        this = _example.new_Device()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Device
+    __del__ = lambda self : None;
+Device_swigregister = _example.Device_swigregister
+Device_swigregister(Device)
+
+class Scenario(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Scenario, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Scenario, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Scenario_name_set
+    __swig_getmethods__["name"] = _example.Scenario_name_get
+    if _newclass:name = _swig_property(_example.Scenario_name_get, _example.Scenario_name_set)
+    __swig_setmethods__["total_time"] = _example.Scenario_total_time_set
+    __swig_getmethods__["total_time"] = _example.Scenario_total_time_get
+    if _newclass:total_time = _swig_property(_example.Scenario_total_time_get, _example.Scenario_total_time_set)
+    __swig_setmethods__["timestep"] = _example.Scenario_timestep_set
+    __swig_getmethods__["timestep"] = _example.Scenario_timestep_get
+    if _newclass:timestep = _swig_property(_example.Scenario_timestep_get, _example.Scenario_timestep_set)
+    __swig_setmethods__["records"] = _example.Scenario_records_set
+    __swig_getmethods__["records"] = _example.Scenario_records_get
+    if _newclass:records = _swig_property(_example.Scenario_records_get, _example.Scenario_records_set)
+    def __init__(self): 
+        this = _example.new_Scenario()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Scenario
+    __del__ = lambda self : None;
+Scenario_swigregister = _example.Scenario_swigregister
+Scenario_swigregister(Scenario)
+
+class Result(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Result, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Result, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["name"] = _example.Result_name_set
+    __swig_getmethods__["name"] = _example.Result_name_get
+    if _newclass:name = _swig_property(_example.Result_name_get, _example.Result_name_set)
+    __swig_setmethods__["data"] = _example.Result_data_set
+    __swig_getmethods__["data"] = _example.Result_data_get
+    if _newclass:data = _swig_property(_example.Result_data_get, _example.Result_data_set)
+    def __init__(self): 
+        this = _example.new_Result()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _example.delete_Result
+    __del__ = lambda self : None;
+Result_swigregister = _example.Result_swigregister
+Result_swigregister(Result)
 
 # This file is compatible with both classic and new-style classes.
 

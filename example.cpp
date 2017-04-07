@@ -5,19 +5,18 @@
 #include <string>
 
 
-double* simul(material& mat) {
-	const char* s;
-	s = "material 1";
-	mat.set_values(1, 1e-9, s);
-	std::cout << mat.name << std::endl;
-	double* t = new double[32000];
-	for (int i=0; i<32000; ++i){
-		t[i] = i * 5/31999;
+double* simul(Device d, Scenario s) {
+	double* ti = new double[32000];
+	for (int i=0; i<32000; i++){
+		ti[i] = i * 1000/31999;
 		}
+	for (int i=0; i<32; ++i)
+		std::cout << ti[i] << std::endl;
 	double* a = new double[32000];
-	for (int i=0; i<32000; ++i){
-		a[i] = std::exp(t[i]);
+	for (int i=0; i<32000; i++){
+		a[i] = std::exp(ti[i]);
 		}
+
 	return a;
 }
 

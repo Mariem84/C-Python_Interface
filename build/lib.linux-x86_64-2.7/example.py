@@ -69,27 +69,38 @@ except AttributeError:
     _newclass = 0
 
 
-class List(_object):
+
+def simul(*args):
+  return _example.simul(*args)
+simul = _example.simul
+
+def double_array(*args):
+  return _example.double_array(*args)
+double_array = _example.double_array
+class material(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, List, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, material, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, List, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, material, name)
     __repr__ = _swig_repr
+    __swig_setmethods__["mat_index"] = _example.material_mat_index_set
+    __swig_getmethods__["mat_index"] = _example.material_mat_index_get
+    if _newclass:mat_index = _swig_property(_example.material_mat_index_get, _example.material_mat_index_set)
+    __swig_setmethods__["length"] = _example.material_length_set
+    __swig_getmethods__["length"] = _example.material_length_get
+    if _newclass:length = _swig_property(_example.material_length_get, _example.material_length_set)
+    __swig_setmethods__["name"] = _example.material_name_set
+    __swig_getmethods__["name"] = _example.material_name_get
+    if _newclass:name = _swig_property(_example.material_name_get, _example.material_name_set)
+    def set_values(self, *args): return _example.material_set_values(self, *args)
     def __init__(self): 
-        this = _example.new_List()
+        this = _example.new_material()
         try: self.this.append(this)
         except: self.this = this
-    __swig_destroy__ = _example.delete_List
+    __swig_destroy__ = _example.delete_material
     __del__ = lambda self : None;
-    def search(self, *args): return _example.List_search(self, *args)
-    def insert(self, *args): return _example.List_insert(self, *args)
-    def remove(self, *args): return _example.List_remove(self, *args)
-    def get(self, *args): return _example.List_get(self, *args)
-    __swig_setmethods__["length"] = _example.List_length_set
-    __swig_getmethods__["length"] = _example.List_length_get
-    if _newclass:length = _swig_property(_example.List_length_get, _example.List_length_set)
-List_swigregister = _example.List_swigregister
-List_swigregister(List)
+material_swigregister = _example.material_swigregister
+material_swigregister(material)
 
 # This file is compatible with both classic and new-style classes.
 
