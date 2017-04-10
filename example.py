@@ -294,6 +294,53 @@ class RecordVector(_object):
 RecordVector_swigregister = _example.RecordVector_swigregister
 RecordVector_swigregister(RecordVector)
 
+class ResultVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ResultVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ResultVector, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _example.ResultVector_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _example.ResultVector___nonzero__(self)
+    def __bool__(self): return _example.ResultVector___bool__(self)
+    def __len__(self): return _example.ResultVector___len__(self)
+    def pop(self): return _example.ResultVector_pop(self)
+    def __getslice__(self, *args): return _example.ResultVector___getslice__(self, *args)
+    def __setslice__(self, *args): return _example.ResultVector___setslice__(self, *args)
+    def __delslice__(self, *args): return _example.ResultVector___delslice__(self, *args)
+    def __delitem__(self, *args): return _example.ResultVector___delitem__(self, *args)
+    def __getitem__(self, *args): return _example.ResultVector___getitem__(self, *args)
+    def __setitem__(self, *args): return _example.ResultVector___setitem__(self, *args)
+    def append(self, *args): return _example.ResultVector_append(self, *args)
+    def empty(self): return _example.ResultVector_empty(self)
+    def size(self): return _example.ResultVector_size(self)
+    def clear(self): return _example.ResultVector_clear(self)
+    def swap(self, *args): return _example.ResultVector_swap(self, *args)
+    def get_allocator(self): return _example.ResultVector_get_allocator(self)
+    def begin(self): return _example.ResultVector_begin(self)
+    def end(self): return _example.ResultVector_end(self)
+    def rbegin(self): return _example.ResultVector_rbegin(self)
+    def rend(self): return _example.ResultVector_rend(self)
+    def pop_back(self): return _example.ResultVector_pop_back(self)
+    def erase(self, *args): return _example.ResultVector_erase(self, *args)
+    def __init__(self, *args): 
+        this = _example.new_ResultVector(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _example.ResultVector_push_back(self, *args)
+    def front(self): return _example.ResultVector_front(self)
+    def back(self): return _example.ResultVector_back(self)
+    def assign(self, *args): return _example.ResultVector_assign(self, *args)
+    def resize(self, *args): return _example.ResultVector_resize(self, *args)
+    def insert(self, *args): return _example.ResultVector_insert(self, *args)
+    def reserve(self, *args): return _example.ResultVector_reserve(self, *args)
+    def capacity(self): return _example.ResultVector_capacity(self)
+    __swig_destroy__ = _example.delete_ResultVector
+    __del__ = lambda self : None;
+ResultVector_swigregister = _example.ResultVector_swigregister
+ResultVector_swigregister(ResultVector)
+
 class Record(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Record, name, value)
@@ -391,6 +438,7 @@ class Device(_object):
     __swig_setmethods__["regions"] = _example.Device_regions_set
     __swig_getmethods__["regions"] = _example.Device_regions_get
     if _newclass:regions = _swig_property(_example.Device_regions_get, _example.Device_regions_set)
+    def push(self, *args): return _example.Device_push(self, *args)
     def __init__(self): 
         this = _example.new_Device()
         try: self.this.append(this)

@@ -3,18 +3,17 @@
 #include <cmath>
 #include <stdio.h>
 #include <string>
+#include <vector>
 
 
-double* simul(Device d, Scenario s) {
-	double* ti = new double[32000];
+std::vector<double> simul(Device d, Scenario s) {
+	std::vector<double> t(32000);
 	for (int i=0; i<32000; i++){
-		ti[i] = i * 1000/31999;
+		t[i] = i;
 		}
-	for (int i=0; i<32; ++i)
-		std::cout << ti[i] << std::endl;
-	double* a = new double[32000];
+	std::vector<double> a(32000); 
 	for (int i=0; i<32000; i++){
-		a[i] = std::exp(ti[i]);
+		a[i] = std::exp(t[i]);
 		}
 
 	return a;

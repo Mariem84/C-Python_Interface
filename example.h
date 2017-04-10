@@ -39,8 +39,11 @@ class Device
 {
 public:
 	const char* name;
-	std::vector<Material> *materials;
-	std::vector<Region> *regions;
+	std::vector<Material> materials;
+	std::vector<Region> regions;
+	void push(Material& mat){
+		materials.push_back(mat);
+		};
 };
 
 class Scenario
@@ -49,13 +52,13 @@ public:
 	const char* name;
 	double total_time;
 	double timestep;
-	std::vector<Record> *records;
+	std::vector<Record> records;
 };
 
 class Result
 {
 public:
 	const char* name;
-	std::vector<double> *data;
+	std::vector<double> data;
 };
 
