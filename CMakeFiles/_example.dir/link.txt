@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared  -o _example.so CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o CMakeFiles/_example.dir/example.cpp.o -lpython2.7 

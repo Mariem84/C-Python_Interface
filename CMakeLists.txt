@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 2.8.9)
+project (example)
+
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE LIBRARY OUPUT_DIRECTORY {/home/kthiri/Tutorial/build})
+set(CMAKE SWIG OUTDIR {/home/kthiri/Tutorial/build})
+set(CMAKE_CPP_FLAG "-fPIC ${CMAKE_CPP_FLAG}")
+
+set(CMAKE_CPP_FLAGS_DEBUG "${CMAKE_CPP_FLAGS_DEBUG} -Wall -g -00")
+set(CMAKE_CPP_FLAGS_RELEASE "${CMAKE_CPP_FLAGS_RELEASE}")
+
+
+FIND_PACKAGE(SWIG REQUIRED)
+INCLUDE(${SWIG_USE_FILE})
+
+FIND_PACKAGE(PythonLibs 2.7.12)
+INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_PATH})
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+
+INCLUDE_DIRECTORIES(/usr/src/linux-headers-4.8.0-36-generic/include)
+
+SET(CMAKE_SWIG_FLAGS "-c++")
+
+SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES CPLUSPLUS ON)
+SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES SWIG_FLAGS "")
+SWIG_ADD_MODULE(example python example.i example.cpp example.h) 
+SWIG_LINK_LIBRARIES(example ${PYTHON_LIBRARIES})
+
+set_property(SOURCE src/example.i PROPERTY SWIG_MODULE_NAME example_realname)
+
+
+install( TARGETS ${SWIG_MODULE_example_REAL_NAME} LIBRARY DESTINATION /home/kthiri/Tutorial/build)
