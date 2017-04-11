@@ -12,6 +12,14 @@ double *double_array(int size) {
 
 %}
 
+%include "std_string.i"
+%apply const std::string& {std::string* rec_name}
+%apply const std::string& {std::string* reg_name}
+%apply const std::string& {std::string* m_name}
+%apply const std::string& {std::string* d_name}
+%apply const std::string& {std::string* s_name}
+%apply const std::string& {std::string* r_name}
+
 %include "std_vector.i"
 namespace std {
 	%template(DoubleVector) vector<double>;

@@ -347,18 +347,14 @@ class Record(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Record, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Record_name_set
-    __swig_getmethods__["name"] = _example.Record_name_get
-    if _newclass:name = _swig_property(_example.Record_name_get, _example.Record_name_set)
-    __swig_setmethods__["interval"] = _example.Record_interval_set
-    __swig_getmethods__["interval"] = _example.Record_interval_get
-    if _newclass:interval = _swig_property(_example.Record_interval_get, _example.Record_interval_set)
-    __swig_setmethods__["row_index"] = _example.Record_row_index_set
-    __swig_getmethods__["row_index"] = _example.Record_row_index_get
-    if _newclass:row_index = _swig_property(_example.Record_row_index_get, _example.Record_row_index_set)
-    __swig_setmethods__["col_index"] = _example.Record_col_index_set
-    __swig_getmethods__["col_index"] = _example.Record_col_index_get
-    if _newclass:col_index = _swig_property(_example.Record_col_index_get, _example.Record_col_index_set)
+    def get_rec_name(self): return _example.Record_get_rec_name(self)
+    def get_rec_interval(self): return _example.Record_get_rec_interval(self)
+    def get_rec_row_index(self): return _example.Record_get_rec_row_index(self)
+    def get_rec_col_index(self): return _example.Record_get_rec_col_index(self)
+    def set_rec_name(self, *args): return _example.Record_set_rec_name(self, *args)
+    def set_rec_interval(self, *args): return _example.Record_set_rec_interval(self, *args)
+    def set_rec_row_index(self, *args): return _example.Record_set_rec_row_index(self, *args)
+    def set_rec_col_index(self, *args): return _example.Record_set_rec_col_index(self, *args)
     def __init__(self): 
         this = _example.new_Record()
         try: self.this.append(this)
@@ -374,19 +370,14 @@ class Material(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Material, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Material_name_set
-    __swig_getmethods__["name"] = _example.Material_name_get
-    if _newclass:name = _swig_property(_example.Material_name_get, _example.Material_name_set)
-    __swig_setmethods__["epsilon_r"] = _example.Material_epsilon_r_set
-    __swig_getmethods__["epsilon_r"] = _example.Material_epsilon_r_get
-    if _newclass:epsilon_r = _swig_property(_example.Material_epsilon_r_get, _example.Material_epsilon_r_set)
-    __swig_setmethods__["mu_r"] = _example.Material_mu_r_set
-    __swig_getmethods__["mu_r"] = _example.Material_mu_r_get
-    if _newclass:mu_r = _swig_property(_example.Material_mu_r_get, _example.Material_mu_r_set)
-    __swig_setmethods__["sigma"] = _example.Material_sigma_set
-    __swig_getmethods__["sigma"] = _example.Material_sigma_get
-    if _newclass:sigma = _swig_property(_example.Material_sigma_get, _example.Material_sigma_set)
-    def set_values(self, *args): return _example.Material_set_values(self, *args)
+    def get_m_name(self): return _example.Material_get_m_name(self)
+    def get_m_epsilon_r(self): return _example.Material_get_m_epsilon_r(self)
+    def get_m_mu_r(self): return _example.Material_get_m_mu_r(self)
+    def get_m_sigma(self): return _example.Material_get_m_sigma(self)
+    def set_m_name(self, *args): return _example.Material_set_m_name(self, *args)
+    def set_m_epsilon_r(self, *args): return _example.Material_set_m_epsilon_r(self, *args)
+    def set_m_mu_r(self, *args): return _example.Material_set_m_mu_r(self, *args)
+    def set_m_sigma(self, *args): return _example.Material_set_m_sigma(self, *args)
     def __init__(self): 
         this = _example.new_Material()
         try: self.this.append(this)
@@ -402,18 +393,14 @@ class Region(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Region, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Region_name_set
-    __swig_getmethods__["name"] = _example.Region_name_get
-    if _newclass:name = _swig_property(_example.Region_name_get, _example.Region_name_set)
-    __swig_setmethods__["x_start"] = _example.Region_x_start_set
-    __swig_getmethods__["x_start"] = _example.Region_x_start_get
-    if _newclass:x_start = _swig_property(_example.Region_x_start_get, _example.Region_x_start_set)
-    __swig_setmethods__["x_end"] = _example.Region_x_end_set
-    __swig_getmethods__["x_end"] = _example.Region_x_end_get
-    if _newclass:x_end = _swig_property(_example.Region_x_end_get, _example.Region_x_end_set)
-    __swig_setmethods__["material_index"] = _example.Region_material_index_set
-    __swig_getmethods__["material_index"] = _example.Region_material_index_get
-    if _newclass:material_index = _swig_property(_example.Region_material_index_get, _example.Region_material_index_set)
+    def get_reg_name(self): return _example.Region_get_reg_name(self)
+    def get_reg_x_start(self): return _example.Region_get_reg_x_start(self)
+    def get_reg_x_end(self): return _example.Region_get_reg_x_end(self)
+    def get_reg_material_index(self): return _example.Region_get_reg_material_index(self)
+    def set_reg_name(self, *args): return _example.Region_set_reg_name(self, *args)
+    def set_reg_x_start(self, *args): return _example.Region_set_reg_x_start(self, *args)
+    def set_reg_x_end(self, *args): return _example.Region_set_reg_x_end(self, *args)
+    def set_reg_material_index(self, *args): return _example.Region_set_reg_material_index(self, *args)
     def __init__(self): 
         this = _example.new_Region()
         try: self.this.append(this)
@@ -429,16 +416,12 @@ class Device(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Device, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Device_name_set
-    __swig_getmethods__["name"] = _example.Device_name_get
-    if _newclass:name = _swig_property(_example.Device_name_get, _example.Device_name_set)
-    __swig_setmethods__["materials"] = _example.Device_materials_set
-    __swig_getmethods__["materials"] = _example.Device_materials_get
-    if _newclass:materials = _swig_property(_example.Device_materials_get, _example.Device_materials_set)
-    __swig_setmethods__["regions"] = _example.Device_regions_set
-    __swig_getmethods__["regions"] = _example.Device_regions_get
-    if _newclass:regions = _swig_property(_example.Device_regions_get, _example.Device_regions_set)
-    def push(self, *args): return _example.Device_push(self, *args)
+    def get_d_name(self): return _example.Device_get_d_name(self)
+    def get_d_materials(self): return _example.Device_get_d_materials(self)
+    def get_d_regions(self): return _example.Device_get_d_regions(self)
+    def set_d_name(self, *args): return _example.Device_set_d_name(self, *args)
+    def set_d_materials(self, *args): return _example.Device_set_d_materials(self, *args)
+    def set_d_regions(self, *args): return _example.Device_set_d_regions(self, *args)
     def __init__(self): 
         this = _example.new_Device()
         try: self.this.append(this)
@@ -454,18 +437,14 @@ class Scenario(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Scenario, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Scenario_name_set
-    __swig_getmethods__["name"] = _example.Scenario_name_get
-    if _newclass:name = _swig_property(_example.Scenario_name_get, _example.Scenario_name_set)
-    __swig_setmethods__["total_time"] = _example.Scenario_total_time_set
-    __swig_getmethods__["total_time"] = _example.Scenario_total_time_get
-    if _newclass:total_time = _swig_property(_example.Scenario_total_time_get, _example.Scenario_total_time_set)
-    __swig_setmethods__["timestep"] = _example.Scenario_timestep_set
-    __swig_getmethods__["timestep"] = _example.Scenario_timestep_get
-    if _newclass:timestep = _swig_property(_example.Scenario_timestep_get, _example.Scenario_timestep_set)
-    __swig_setmethods__["records"] = _example.Scenario_records_set
-    __swig_getmethods__["records"] = _example.Scenario_records_get
-    if _newclass:records = _swig_property(_example.Scenario_records_get, _example.Scenario_records_set)
+    def get_s_name(self): return _example.Scenario_get_s_name(self)
+    def get_s_total_time(self): return _example.Scenario_get_s_total_time(self)
+    def get_s_timestep(self): return _example.Scenario_get_s_timestep(self)
+    def get_s_records(self): return _example.Scenario_get_s_records(self)
+    def set_s_name(self, *args): return _example.Scenario_set_s_name(self, *args)
+    def set_s_total_time(self, *args): return _example.Scenario_set_s_total_time(self, *args)
+    def set_s_timestep(self, *args): return _example.Scenario_set_s_timestep(self, *args)
+    def set_s_records(self, *args): return _example.Scenario_set_s_records(self, *args)
     def __init__(self): 
         this = _example.new_Scenario()
         try: self.this.append(this)
@@ -481,12 +460,10 @@ class Result(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Result, name)
     __repr__ = _swig_repr
-    __swig_setmethods__["name"] = _example.Result_name_set
-    __swig_getmethods__["name"] = _example.Result_name_get
-    if _newclass:name = _swig_property(_example.Result_name_get, _example.Result_name_set)
-    __swig_setmethods__["data"] = _example.Result_data_set
-    __swig_getmethods__["data"] = _example.Result_data_get
-    if _newclass:data = _swig_property(_example.Result_data_get, _example.Result_data_set)
+    def get_r_name(self): return _example.Result_get_r_name(self)
+    def get_r_data(self): return _example.Result_get_r_data(self)
+    def set_r_name(self, *args): return _example.Result_set_r_name(self, *args)
+    def set_r_data(self, *args): return _example.Result_set_r_data(self, *args)
     def __init__(self): 
         this = _example.new_Result()
         try: self.this.append(this)

@@ -24,10 +24,11 @@ nr = int(raw_input("Give number of Records :"))
 rec = example.RecordVector(nr)
 for x in range (0,nr):
 	print("Record :")
-	rec[x].name = raw_input("name :")
-	rec[x].interval = float(raw_input("interval :"))
-	rec[x].row_index = int(raw_input("row index :"))
-	rec[x].col_index = int(raw_input("column index :"))
+	rec[x].set_rec_name(raw_input("name :"))
+	i = raw_input("interval :")
+	rec[x].set_rec_interval(float(i))
+	rec[x].set_rec_row_index(int(raw_input("row index :")))
+	rec[x].set_rec_col_index(int(raw_input("column index :")))
 
 
 #create vector of Materials
@@ -35,10 +36,10 @@ n = int(raw_input("Give number of Materials :"))
 mv = example.MaterialVector(n)
 for x in range (0,n):
 	print("Material ",x+1," :")
-	mv[x].name = raw_input("name :")
-	mv[x].epsilon_r = float(raw_input("epsilon r :"))
-	mv[x].mu_r = float(raw_input("mu r :"))
-	mv[x].sigma = float(raw_input("sigma :"))
+	mv[x].set_m_name(raw_input("name :"))
+	mv[x].set_m_epsilon_r(float(raw_input("epsilon r :")))
+	mv[x].set_m_mu_r(float(raw_input("mu r :")))
+	mv[x].set_m_sigma(float(raw_input("sigma :")))
 
 
 #create vector of Regions
@@ -46,25 +47,25 @@ n = int(raw_input("Give number of Regions :"))
 rv = example.RegionVector(n)
 for x in range (0,n):
 	print("Region ",x+1," :")
-	rv[x].name = raw_input("name :")
-	rv[x].x_start = float(raw_input("start :"))
-	rv[x].x_end = float(raw_input("end :"))
-	rv[x].material_index = int(raw_input("material index :"))
+	rv[x].set_reg_name(raw_input("name :"))
+	rv[x].set_reg_x_start(float(raw_input("start :")))
+	rv[x].set_reg_x_end(float(raw_input("end :")))
+	rv[x].set_reg_material_index(int(raw_input("material index :")))
 
 
 #create Device
 dev = example.Device()
-dev.name = raw_input("Give name of the Device :")
-dev.materials = mv
-dev.regions = rv
+dev.set_d_name(raw_input("Give name of the Device :"))
+dev.set_d_materials(mv)
+dev.set_d_regions(rv)
 
 #create instance of Scenario
 print("Scenario :")
 scen = example.Scenario()
-scen.name = raw_input("name :")
-scen.total_time = s.total_time
-scen.timestep = s.timestep
-scen.records = rec
+scen.set_s_name(raw_input("name :"))
+scen.set_s_total_time(s.total_time)
+scen.set_s_timestep(s.timestep)
+scen.set_s_records(rec)
 
 #create Results
 t = np.linspace(0,s.total_time,s.total_time/s.timestep)
@@ -73,15 +74,15 @@ result = example.ResultVector(nr)
 for x in range (0,nr):
 	result[x].name = raw_input("Give name of the Result :")
 	r = example.simul(dev, scen)
-	result[x].data = r[0:int(s.total_time/s.timestep)]
-	print(len(result[x].data))
+	result[x].set_r_data(r[0:int(s.total_time/s.timestep)])
+	print(len(np.array(result[x].get_r_data())))
 
 #save in hdf5 File
 with h5py.File("f.h5", "w") as hdf:
 	resultat = hdf.create_group('Resultat')	
 	for x in range (0,nr):
-		dataset = resultat.create_dataset("data", data = result[x].data, compression = 'gzip', compression_opts = 9)
-		dataset.attrs["name"] = result[x].name
+		dataset = resultat.create_dataset("data", data = np.array(result[x].get_r_data()), compression = 'gzip', compression_opts = 9)
+		dataset.attrs["name"] = result[x].get_r_name()
 	resultat.attrs["total time"] = s.total_time
 	resultat.attrs["time step"] = s.timestep
 
@@ -101,7 +102,7 @@ with h5py.File("f.h5", "r") as hdf:
 
 #plot results
 for x in range (0,nr):
-	plt.plot(t,result[x].data)
+	plt.plot(t,np.array(result[x].get_r_data()))
 	plt.axis([0,5,0,100])
 	plt.show()
 
