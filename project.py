@@ -70,11 +70,9 @@ scen.set_s_records(rec)
 #create Results
 t = np.linspace(0,s.total_time,s.total_time/s.timestep)
 print(len(t))
-result = example.ResultVector(nr)
+result = example.simul(dev, scen)
 for x in range (0,nr):
 	result[x].name = raw_input("Give name of the Result :")
-	r = example.simul(dev, scen)
-	result[x].set_r_data(r[0:int(s.total_time/s.timestep)])
 	print(len(np.array(result[x].get_r_data())))
 
 #save in hdf5 File

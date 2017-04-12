@@ -5,7 +5,7 @@
 %inline %{
 #define SWIG_FILE_WITH_INIT
 #include "example.h"
-std::vector<double> simul(Device d, Scenario s);
+std::vector<Result> simul(Device d, Scenario s);
 double *double_array(int size) {
      return (double *) malloc(size*sizeof(double));
   }
@@ -37,5 +37,5 @@ extern class Region;
 extern class Device;
 extern class Scenario;
 extern class Result;
-std::vector<double> simul(Device d, Scenario s);
+std::vector<Result> simul(Device d, Scenario s);
 
