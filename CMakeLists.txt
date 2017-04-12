@@ -27,7 +27,7 @@ SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES SWIG_FLAGS "")
 SWIG_ADD_MODULE(example python example.i example.cpp example.h) 
 SWIG_LINK_LIBRARIES(example ${PYTHON_LIBRARIES})
 
-set_property(SOURCE src/example.i PROPERTY SWIG_MODULE_NAME example_realname)
+set_property(SOURCE example.i PROPERTY SWIG_MODULE_NAME example_realname)
 
 
 install( TARGETS ${SWIG_MODULE_example_REAL_NAME} LIBRARY DESTINATION /home/kthiri/Tutorial/build)
