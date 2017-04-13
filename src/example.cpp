@@ -15,8 +15,9 @@ std::vector<Result> simul(Device d, Scenario s) {
 	for (int i=0; i<100; i++){
 		v[i] = std::exp(t[i]);
 		}
-	std::vector<Result> a(2); 
-	for (int i=0; i<2; i++){
+	int nbr = s.get_s_records().size();
+	std::vector<Result> a(nbr); 
+	for (int i=0; i<nbr; i++){
 		a[i].set_r_data(v);
 		}
 	return a;

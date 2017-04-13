@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC
 
 CXX_DEFINES = -D_example_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/python2.7 -I/home/kthiri/Project -I/usr/src/linux-headers-4.8.0-36-generic/include 
+CXX_INCLUDES = -I/usr/include/python2.7 -I/home/kthiri/Project -I/home/kthiri/Tutorial/src 
 

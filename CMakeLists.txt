@@ -18,13 +18,13 @@ INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_PATH})
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 
-INCLUDE_DIRECTORIES(/usr/src/linux-headers-4.8.0-36-generic/include)
+INCLUDE_DIRECTORIES(/home/kthiri/Tutorial/src)
 
 SET(CMAKE_SWIG_FLAGS "-c++")
 
-SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES CPLUSPLUS ON)
-SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES SWIG_FLAGS "")
-SWIG_ADD_MODULE(example python example.i example.cpp example.h) 
+SET_SOURCE_FILES_PROPERTIES(src/example.i PROPERTIES CPLUSPLUS ON)
+SET_SOURCE_FILES_PROPERTIES(src/example.i PROPERTIES SWIG_FLAGS "")
+SWIG_ADD_MODULE(example python src/example.i src/example.cpp src/example.h) 
 SWIG_LINK_LIBRARIES(example ${PYTHON_LIBRARIES})
 
 set_property(SOURCE example.i PROPERTY SWIG_MODULE_NAME example_realname)

@@ -4,7 +4,7 @@ file(REMOVE_RECURSE
   "examplePYTHON_wrap.cxx"
   "example.py"
   "CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o"
-  "CMakeFiles/_example.dir/example.cpp.o"
+  "CMakeFiles/_example.dir/src/example.cpp.o"
   "_example.pdb"
   "_example.so"
 )

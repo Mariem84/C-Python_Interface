@@ -46,7 +46,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/kthiri/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kthiri/Project
+CMAKE_BINARY_DIR = /home/kthiri/Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/_example.dir/depend.make
@@ -57,26 +57,26 @@ include CMakeFiles/_example.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/_example.dir/flags.make
 
-examplePYTHON_wrap.cxx: example.i
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kthiri/Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Swig source"
-	/usr/bin/cmake -E make_directory /home/kthiri/Project
-	/usr/bin/swig2.0 -python -c++ -outdir /home/kthiri/Project -c++ -I/usr/include/python2.7 -I/home/kthiri/Project -I/usr/src/linux-headers-4.8.0-36-generic/include -o /home/kthiri/Project/examplePYTHON_wrap.cxx /home/kthiri/Project/example.i
+examplePYTHON_wrap.cxx: ../src/example.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kthiri/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Swig source"
+	/usr/bin/cmake -E make_directory /home/kthiri/Project/build
+	/usr/bin/swig2.0 -python -c++ -outdir /home/kthiri/Project/build -c++ -I/usr/include/python2.7 -I/home/kthiri/Project -I/home/kthiri/Tutorial/src -o /home/kthiri/Project/build/examplePYTHON_wrap.cxx /home/kthiri/Project/src/example.i
 
 example.py: examplePYTHON_wrap.cxx
 	@$(CMAKE_COMMAND) -E touch_nocreate example.py
 
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o: CMakeFiles/_example.dir/flags.make
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o: examplePYTHON_wrap.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kthiri/Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o -c /home/kthiri/Project/examplePYTHON_wrap.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kthiri/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o -c /home/kthiri/Project/build/examplePYTHON_wrap.cxx
 
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kthiri/Project/examplePYTHON_wrap.cxx > CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kthiri/Project/build/examplePYTHON_wrap.cxx > CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.i
 
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kthiri/Project/examplePYTHON_wrap.cxx -o CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kthiri/Project/build/examplePYTHON_wrap.cxx -o CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.s
 
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o.requires:
 
@@ -89,44 +89,44 @@ CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o.provides: CMakeFiles/_example.d
 CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o.provides.build: CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o
 
 
-CMakeFiles/_example.dir/example.cpp.o: CMakeFiles/_example.dir/flags.make
-CMakeFiles/_example.dir/example.cpp.o: example.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kthiri/Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/_example.dir/example.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_example.dir/example.cpp.o -c /home/kthiri/Project/example.cpp
+CMakeFiles/_example.dir/src/example.cpp.o: CMakeFiles/_example.dir/flags.make
+CMakeFiles/_example.dir/src/example.cpp.o: ../src/example.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kthiri/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/_example.dir/src/example.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_example.dir/src/example.cpp.o -c /home/kthiri/Project/src/example.cpp
 
-CMakeFiles/_example.dir/example.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_example.dir/example.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kthiri/Project/example.cpp > CMakeFiles/_example.dir/example.cpp.i
+CMakeFiles/_example.dir/src/example.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_example.dir/src/example.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kthiri/Project/src/example.cpp > CMakeFiles/_example.dir/src/example.cpp.i
 
-CMakeFiles/_example.dir/example.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_example.dir/example.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kthiri/Project/example.cpp -o CMakeFiles/_example.dir/example.cpp.s
+CMakeFiles/_example.dir/src/example.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_example.dir/src/example.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kthiri/Project/src/example.cpp -o CMakeFiles/_example.dir/src/example.cpp.s
 
-CMakeFiles/_example.dir/example.cpp.o.requires:
+CMakeFiles/_example.dir/src/example.cpp.o.requires:
 
-.PHONY : CMakeFiles/_example.dir/example.cpp.o.requires
+.PHONY : CMakeFiles/_example.dir/src/example.cpp.o.requires
 
-CMakeFiles/_example.dir/example.cpp.o.provides: CMakeFiles/_example.dir/example.cpp.o.requires
-	$(MAKE) -f CMakeFiles/_example.dir/build.make CMakeFiles/_example.dir/example.cpp.o.provides.build
-.PHONY : CMakeFiles/_example.dir/example.cpp.o.provides
+CMakeFiles/_example.dir/src/example.cpp.o.provides: CMakeFiles/_example.dir/src/example.cpp.o.requires
+	$(MAKE) -f CMakeFiles/_example.dir/build.make CMakeFiles/_example.dir/src/example.cpp.o.provides.build
+.PHONY : CMakeFiles/_example.dir/src/example.cpp.o.provides
 
-CMakeFiles/_example.dir/example.cpp.o.provides.build: CMakeFiles/_example.dir/example.cpp.o
+CMakeFiles/_example.dir/src/example.cpp.o.provides.build: CMakeFiles/_example.dir/src/example.cpp.o
 
 
 # Object files for target _example
 _example_OBJECTS = \
 "CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o" \
-"CMakeFiles/_example.dir/example.cpp.o"
+"CMakeFiles/_example.dir/src/example.cpp.o"
 
 # External object files for target _example
 _example_EXTERNAL_OBJECTS =
 
 _example.so: CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o
-_example.so: CMakeFiles/_example.dir/example.cpp.o
+_example.so: CMakeFiles/_example.dir/src/example.cpp.o
 _example.so: CMakeFiles/_example.dir/build.make
 _example.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
 _example.so: CMakeFiles/_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kthiri/Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module _example.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kthiri/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module _example.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,7 +135,7 @@ CMakeFiles/_example.dir/build: _example.so
 .PHONY : CMakeFiles/_example.dir/build
 
 CMakeFiles/_example.dir/requires: CMakeFiles/_example.dir/examplePYTHON_wrap.cxx.o.requires
-CMakeFiles/_example.dir/requires: CMakeFiles/_example.dir/example.cpp.o.requires
+CMakeFiles/_example.dir/requires: CMakeFiles/_example.dir/src/example.cpp.o.requires
 
 .PHONY : CMakeFiles/_example.dir/requires
 
@@ -145,6 +145,6 @@ CMakeFiles/_example.dir/clean:
 
 CMakeFiles/_example.dir/depend: examplePYTHON_wrap.cxx
 CMakeFiles/_example.dir/depend: example.py
-	cd /home/kthiri/Project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kthiri/Project /home/kthiri/Project /home/kthiri/Project /home/kthiri/Project /home/kthiri/Project/CMakeFiles/_example.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kthiri/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kthiri/Project /home/kthiri/Project /home/kthiri/Project/build /home/kthiri/Project/build /home/kthiri/Project/build/CMakeFiles/_example.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_example.dir/depend
 
