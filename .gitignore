@@ -2,4 +2,6 @@
 *.so
 *.pyc
 build
+!python/_example.so
+!python/example.pyc
 .ipynb_checkpoints
