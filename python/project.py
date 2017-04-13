@@ -31,7 +31,7 @@ nr = len(s.records)
 rec = example.RecordVector(nr)
 for x in range (0,nr):
 	print("Record :")
-	rec[x].set_rec_name(s.records[x].name)
+	rec[x].set_rec_name(str(s.records[x].name))
 	rec[x].set_rec_interval(s.records[x].interval)
 	rec[x].set_rec_row_index(s.records[x].row_index)
 	rec[x].set_rec_col_index(s.records[x].col_index)
