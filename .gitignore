@@ -1,9 +1,5 @@
 *.o
 *.so
 *.pyc
-mybuild
-CMakeCache.txt
-Makefile
-cmake_install.cmake
-examplePYTHON_wrap.cxx
+build
 .ipynb_checkpoints
