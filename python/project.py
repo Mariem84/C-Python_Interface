@@ -8,9 +8,16 @@ import lxml.etree as etree
 
 f = raw_input("Give name of the XML File to load settings :") 
 
+class record(dexml.Model):
+	name = fields.String(tagname="name")
+	interval = fields.Float(tagname="interval")
+	row_index = fields.Integer(tagname="row_index")
+	col_index = fields.Integer(tagname="col_index")
+
 class settings(dexml.Model):
 	total_time = fields.Float(tagname="total_time")
 	timestep = fields.Float(tagname="timestep")
+	records = fields.List(record)
 	
 
 #parse XML File
@@ -20,15 +27,14 @@ s = settings.parse(xmlstr)
 print(s.total_time, s.timestep)
 
 #create vector of Records
-nr = int(raw_input("Give number of Records :"))
+nr = len(s.records)
 rec = example.RecordVector(nr)
 for x in range (0,nr):
 	print("Record :")
-	rec[x].set_rec_name(raw_input("name :"))
-	i = raw_input("interval :")
-	rec[x].set_rec_interval(float(i))
-	rec[x].set_rec_row_index(int(raw_input("row index :")))
-	rec[x].set_rec_col_index(int(raw_input("column index :")))
+	rec[x].set_rec_name(s.records[x].name)
+	rec[x].set_rec_interval(s.records[x].interval)
+	rec[x].set_rec_row_index(s.records[x].row_index)
+	rec[x].set_rec_col_index(s.records[x].col_index)
 
 
 #create vector of Materials
