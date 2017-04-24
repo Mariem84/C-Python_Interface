@@ -1,0 +1,26 @@
+\chapter{Results}
+\label{chapter:results}
+\section{Python/C++ Interface :}
+The user interface consists of:
+\subsection{C++ Library :} 
+\begin{itemize}
+\item C++ Class Record : specifies which results should be stored and in which interval.
+\item C++ Class Material : contains the characteristics of each material (name, electric permittivity, magnetic permeability, sigma).
+\item C++ Class Region : includes the specifications of each region (name, start, end, material index).
+\item C++ Class Device : lists the materials and regions applied in the simulation.
+\item C++ Class Scenario (string name, double total time, double timestep, List Record records): 
+\item C++ Class Result (string name, List double data)
+\item C++ Function: List Result simul(Device d, Scenario s)Depending on the Device and Scenario , determine the results (electric field, population on each level..)
+\end{itemize}
+
+\subsection{Interface :}
+CMakeLists.txt file compiles the different modules (source code: interface file, header file and C++ files) using SWIG and links them to the Tesprogram
+
+\subsection{Python Testprogram :}
+The testprogram (Skript and Notebook) allows the setup of Materials, Device, Scenario etc., extracts Metadata from an XML File, calls the C++ Function that calculates the required results, displays them and  stores them in a ddition to the Metadata in a HDF5 File.
+
+\section{Compatibility with Python3 :}
+SWIG is compatible with the different versions of Python (Python 2.7 and Python 3.x). To choose a specific version, all that has to be done is to indicate it in the CMakeLists.txt File, which will find the corresponding packages and use them to compile and link.
+
+\section{SWIG on Windows :}
+Another approach can be applied to achieve these results on Windows: using a Setup script (setup.py file). The only problem it might cause is structuring the files in the project: the setup file needs all files required to build the program in one directory and it generates data in the same folder.

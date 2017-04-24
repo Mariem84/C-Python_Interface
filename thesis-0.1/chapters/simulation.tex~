@@ -1,0 +1,40 @@
+\chapter{Simulation and Results}
+\label{chapter:simulation}
+
+Make sure your text contains references to \textbf{all} figures (see Fig.~\ref{fig:intensity}) and tables (see Tab.~\ref{tab:settings}). Wherever possible, use the TUM color scheme\footnote{\url{https://portal.mytum.de/corporatedesign/index_html/}}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{eps/intensity-modelock}
+  \caption{Give a meaningful caption.}
+  \label{fig:intensity}
+\end{figure}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|lccl|}
+\hline
+\textbf{Name} & \textbf{Symbol} & \textbf{Value} & \multicolumn{1}{c|}{\textbf{Unit}}\\
+\hline
+Cavity length & $L_x$ & \num{3} & \si{\milli\meter}\\
+\hline
+Period length & $L_p$ & \num{48} & \si{\nano\meter}\\
+\hline
+Doping density & $N$ & \num{5e16} & \si{\per\cubic\centi\meter}\\
+\hline
+Overlap factor & $\Gamma$ & \num{0.8} & ---\\
+\hline
+Relative permittivity & $\epsilon_t$ & \num{12.96} & ---\\
+\hline
+Pure dephasing time & $\tau_{pure,iu}$ & \num{0.4} & \si{\pico\second}\\
+\hline
+Pure dephasing time & $\tau_{pure,ul}$ & \num{0.8} & \si{\pico\second}\\
+\hline
+Pure dephasing time & $\tau_{pure,il}$ & \num{0.8} & \si{\pico\second}\\
+\hline
+Losses & $\alpha_0$ & \num{12} & \si{\per\centi\meter}\\
+\hline
+\end{tabular}
+\caption{Device parameters. Use the \texttt{siunitx} package to typeset quantities correctly.}
+\label{tab:settings}
+\end{table}

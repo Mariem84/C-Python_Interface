@@ -1,0 +1,30 @@
+\chapter{Theoretical Background}
+\label{chapter:theory}
+In this project,a high performing programming language was required for the simulation because of the large size of data and the elaborate numerical treatments. C++ fullfills these criteria not to mention that it is available everywhere and reasonably well standardized. Nevertheless it has some drawbacks: First of all it is not interactive and implementing it for user-interfaces can be quite complex(see Tab.~\ref{table:settings}).\\
+That is why it was opted for Python for the interface which brings flexibilty interactivity and simplicity.
+To sum it up, the goal is to create a common interface that can be provided with different C++ libraries, these will be wrapped in Python modules and loaded dynamically during the execution of the program.\\
+
+
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|cc|}
+\hline
+\textbf{C++} & \textbf{Python}\\
+\hline
+\textbf{Advantages} & \textbf{Advantages} \\
+High performance and speed & Flexibility (fast edit-build-debug cycle)
+\\useful for intensive tasks & Interactivity\\
+
+Parallelization techniques & (create, change, view objects at runtime) \\
+
+\textbf{Drawbacks} & \textbf{Drawbacks} \\
+
+Non-interactive & relatively slow\\
+Writing user-interfaces & Limitations with memory intensive tasks\\
+is complex &  Limitations with database access\\
+\hline
+\end{tabular}
+\caption{Characterictics of C++ and Python.\label{table:settings}}
+
+\end{table}

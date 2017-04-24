@@ -1,1 +1,1 @@
-<?xml version="1.0" ?><settings><total_time>100</total_time><timestep>1</timestep><record><name>"rec1"</name><interval>150</interval><row_index>1</row_index><col_index>1</col_index></record></settings>
+<?xml version="1.0" ?><settings><total_time>100</total_time><timestep>1</timestep><record name="rec1"><interval>150</interval><row_index>1</row_index><col_index>1</col_index></record></settings>
