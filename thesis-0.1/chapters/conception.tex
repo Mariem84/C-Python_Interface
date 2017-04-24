@@ -14,12 +14,13 @@ Creating the Python/C++ Interface was possible through different means:\\
   \centering
   \includegraphics[width=0.5\textwidth]{figures/swig_func}
   \caption{Functionality of SWIG}
+  \caption*{Source: https://www.slideshare.net}
   \label{fig:swig}
 \end{figure}
 \end{itemize}
 After installing SWIG, a Python module was created starting from an interface file and a header file written in C++. The next step was to wrap a C++ class in order to create instances of this class and modify its attributes in the Python Testprogram. Then the complete C++ library was gradually elaborated, adding each time required attributes and declarations.\\
 \section{Serialisation of input parameters}
-The next point to handle was the input parameters, how to extract them from an XML File and then store them with results at the end. The first option was to use exml or lxml libraries, which could parse XML files but the resulting objects having NoType made handling them problematic. Therefore, a simple object-XML mapper for Python called dexml was applied to serialize the Metadata by defining subclasses of the class dexml.Model and saving the parameters as instances.\\
+The next point to handle was the input parameters, how to extract them from an XML File and then store them with results at the end. The first option was to use exml or lxml libraries, which could parse XML files but the resulting objects having NoType made handling them problematic. Therefore, a simple object-XML mapper for Python called dexml was applied to serialize the metadata by defining subclasses of the class dexml.Model and saving the parameters as instances.\\
 \section{Storing results}
 Furthermore, it was necessary to specify the file format for the simulation results, which lead to the following options:\\
 \begin{itemize}
