@@ -1,8 +1,16 @@
 \begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 
-\bibitem{bastard1992}
-C.~L. Tang, \emph{Fundamentals of Quantum Mechanics: For Solid State
-  Electronics and Optics} (Cambridge University Press, 2009).
+\bibitem{tang2005}
+C.~L. Tang, \emph{Fundamentals of Quantum Mechanics} (Cambridge University
+  Press, Cambridge, United Kingdom, 2005).
+
+\bibitem{swig}
+\enquote{{C ++ wrapping with swig},}
+  \url{https://www.slideshare.net/deview/swig-c}.
+
+\bibitem{hdf5}
+\enquote{{HDF5 Technologies},}
+  \url{https://support.hdfgroup.org/about/hdf_technologies.html}.
 
 \end{thebibliography}

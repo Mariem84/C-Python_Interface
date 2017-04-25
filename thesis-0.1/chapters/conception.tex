@@ -2,7 +2,7 @@
 \label{chapter:conception}
 
 \section{Literature and basics}
-At the beginning, it was necessary to acquire some basics about quantum mechanics (density matrix, Maxwell-Bloch equations..) by reading some introductory literature ~\cite{bastard1992}. A concrete example for the simulation and the numerical solving of the Maxwell-Bloch system was described in the paper of Ziolkowski.\\
+At the beginning, it was necessary to acquire some basics about quantum mechanics (density matrix, Maxwell-Bloch equations..) by reading some introductory literature ~\cite{tang2005}. A concrete example for the simulation and the numerical solving of the Maxwell-Bloch system was described in the paper of Ziolkowski.\\
 QuTiP, a Python Toolbox for simulating the dynamics of open quantum systems, was then the starting point. It offered a variety of examples using Jupyter Notebooks: an interactive tool designed to display neatly arranged code blocks with human-friendly text which makes project easier to manage and share, they are used in this case to describe quantum mechanic systems, such as single-atom lasing, quantum Monte Carlo trajectories...\\
 \section{Python/C++ Interface}
 Creating the Python/C++ Interface was possible through different means:\\
@@ -13,8 +13,7 @@ Creating the Python/C++ Interface was possible through different means:\\
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/swig_func}
-  \caption{Functionality of SWIG}
-  \caption*{Source: https://www.slideshare.net}
+  \caption{Functionality of SWIG} ~\cite{swig}
   \label{fig:swig}
 \end{figure}
 \end{itemize}
@@ -26,7 +25,7 @@ Furthermore, it was necessary to specify the file format for the simulation resu
 \begin{itemize}
 \item XML (Extensible Markup Language): XML's biggest advantage is that it provides developers with a tool that concisely and unambiguously defines the format of data records. However it is not suitable for large amount of data.\\
 \item VTK (Visualization Toolkit): It is a powerful tool to visualize scalars, vectors, complex numbers.. but  requires a diffcult setup and an understanding of the framework.\\ 
-\item HDF5 (Hierarchical Data Format): HDF5 is a file format that enables the storage and management of data of different types. It is suitable for high volume and complex data. In fact, a HDF5 file consists of datasets (multidimensional arrays) and groups, which contain diverse data: datasets, graphics, other groups.. Another advantage is the ability of compression and chunking, which makes the storage more flexible and efficient.\\ 
+\item HDF5 (Hierarchical Data Format): HDF5 is a file format that enables the storage and management of data of different types. It is suitable for high volume and complex data. In fact, a HDF5 file consists of datasets (multidimensional arrays) and groups, which contain diverse data: datasets, graphics, other groups.. Another advantage is the ability of compression and chunking, which makes the storage more flexible and efficient ~\cite{hdf5}.\\ 
 \end{itemize}
 All that considered, HDF5 is the most suitable file format not only to store large amount of data (results) but also different types simultaneously (Metadata).
 \section{Git}
