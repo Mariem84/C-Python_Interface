@@ -1,0 +1,4 @@
+compile with
+
+$ latexmk -pdf Thesis.tex
+$ latexmk -pdf Presentation.tex
