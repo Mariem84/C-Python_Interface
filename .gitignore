@@ -4,3 +4,5 @@
 *.h5
 build
 .ipynb_checkpoints
+thesis-0.1
+!*.pdf
