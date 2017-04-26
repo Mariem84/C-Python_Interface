@@ -6,7 +6,7 @@ import dexml
 from dexml import fields
 import lxml.etree as etree
 
-f = raw_input("Give name of the XML File to load settings :") 
+f = input("Give name of the XML File to load settings :") 
 
 class record(dexml.Model):
 	name = fields.String()
@@ -38,37 +38,37 @@ for x in range (0,nr):
 
 
 #create vector of Materials
-n = int(raw_input("Give number of Materials :"))
+n = int(input("Give number of Materials :"))
 mv = example.MaterialVector(n)
 for x in range (0,n):
 	print("Material ",x+1," :")
-	mv[x].set_m_name(raw_input("name :"))
-	mv[x].set_m_epsilon_r(float(raw_input("epsilon r :")))
-	mv[x].set_m_mu_r(float(raw_input("mu r :")))
-	mv[x].set_m_sigma(float(raw_input("sigma :")))
+	mv[x].set_m_name(input("name :"))
+	mv[x].set_m_epsilon_r(float(input("epsilon r :")))
+	mv[x].set_m_mu_r(float(input("mu r :")))
+	mv[x].set_m_sigma(float(input("sigma :")))
 
 
 #create vector of Regions
-n = int(raw_input("Give number of Regions :"))
+n = int(input("Give number of Regions :"))
 rv = example.RegionVector(n)
 for x in range (0,n):
 	print("Region ",x+1," :")
-	rv[x].set_reg_name(raw_input("name :"))
-	rv[x].set_reg_x_start(float(raw_input("start :")))
-	rv[x].set_reg_x_end(float(raw_input("end :")))
-	rv[x].set_reg_material_index(int(raw_input("material index :")))
+	rv[x].set_reg_name(input("name :"))
+	rv[x].set_reg_x_start(float(input("start :")))
+	rv[x].set_reg_x_end(float(input("end :")))
+	rv[x].set_reg_material_index(int(input("material index :")))
 
 
 #create Device
 dev = example.Device()
-dev.set_d_name(raw_input("Give name of the Device :"))
+dev.set_d_name(input("Give name of the Device :"))
 dev.set_d_materials(mv)
 dev.set_d_regions(rv)
 
 #create instance of Scenario
 print("Scenario :")
 scen = example.Scenario()
-scen.set_s_name(raw_input("name :"))
+scen.set_s_name(input("name :"))
 scen.set_s_total_time(s.total_time)
 scen.set_s_timestep(s.timestep)
 scen.set_s_records(rec)
@@ -78,7 +78,7 @@ t = np.linspace(0,s.total_time,s.total_time/s.timestep)
 print(len(t))
 result = example.simul(dev, scen)
 for x in range (0,nr):
-	result[x].name = raw_input("Give name of the Result :")
+	result[x].name = input("Give name of the Result :")
 	print(len(np.array(result[x].get_r_data())))
 
 #save in hdf5 File
@@ -109,5 +109,4 @@ for x in range (0,nr):
 	plt.plot(t,np.array(result[x].get_r_data()))
 	plt.axis([0,5,0,100])
 	plt.show()
-
 
