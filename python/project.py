@@ -30,7 +30,7 @@ print(s.total_time, s.timestep)
 nr = len(s.records)
 rec = example.RecordVector(nr)
 for x in range (0,nr):
-	print("Record :")
+	print'{} {} {}'.format('Record', x+1, ' :')
 	rec[x].set_rec_name(str(s.records[x].name))
 	rec[x].set_rec_interval(s.records[x].interval)
 	rec[x].set_rec_row_index(s.records[x].row_index)
@@ -41,7 +41,7 @@ for x in range (0,nr):
 n = int(raw_input("Give number of Materials :"))
 mv = example.MaterialVector(n)
 for x in range (0,n):
-	print("Material ",x+1," :")
+	print'{} {} {}'.format('Material', x+1, ' :')
 	mv[x].set_m_name(raw_input("name :"))
 	mv[x].set_m_epsilon_r(float(raw_input("epsilon r :")))
 	mv[x].set_m_mu_r(float(raw_input("mu r :")))
@@ -52,7 +52,7 @@ for x in range (0,n):
 n = int(raw_input("Give number of Regions :"))
 rv = example.RegionVector(n)
 for x in range (0,n):
-	print("Region ",x+1," :")
+	print'{} {} {}'.format('Region', x+1, ' :')
 	rv[x].set_reg_name(raw_input("name :"))
 	rv[x].set_reg_x_start(float(raw_input("start :")))
 	rv[x].set_reg_x_end(float(raw_input("end :")))
