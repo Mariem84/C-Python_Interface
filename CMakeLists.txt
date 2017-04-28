@@ -34,6 +34,15 @@ SET_SOURCE_FILES_PROPERTIES(src/example.i PROPERTIES SWIG_FLAGS "")
 SWIG_ADD_MODULE(example python src/example.i src/example.cpp include/example.h) 
 SWIG_LINK_LIBRARIES(example ${PYTHON_LIBRARIES})
 
+set(LIB_TARGET "_${PROJECT_NAME}.so")
+set(PY_TARGET "${PROJECT_NAME}.py")
+set(PYC_TARGET "${PROJECT_NAME}.pyc")
+
+INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/${LIB_TARGET}
+  ${CMAKE_CURRENT_BINARY_DIR}/${PY_TARGET} ${CMAKE_CURRENT_BINARY_DIR}/${PYC_TARGET}
+  DESTINATION lib/python)
+
+
 set_property(SOURCE example.i PROPERTY SWIG_MODULE_NAME example_realname)
 
 
